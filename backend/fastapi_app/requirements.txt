@@ -1,0 +1,15 @@
+fastapi
+requests
+uvicorn
+google.generativeai
+python-dotenv
+docker
+psycopg2-binary
+mysql-connector-python
+pillow
+langchain_community
+matplotlib
+firebase_admin
+pandas
+fastapi-cli
+
