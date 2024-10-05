@@ -15,41 +15,7 @@ UPLOAD_FOLDER = './uploads/'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-chats = [
-    {
-      "chat_id": "qdI5if7aROU1",
-      "chat_name": "Actual Chat",
-      "database": "test",
-      "dbms": "postgresql",
-      "environment": "local",
-      "host_name": "localhost",
-      "password": "tirthraj07",
-      "port": "5432",
-      "user": "postgres"
-    },
-    {
-      "chat_id": "iZWrhq2rQc0L",
-      "chat_name": "Users Chat",
-      "database": "pulzion",
-      "dbms": "postgresql",
-      "environment": "local",
-      "host_name": "localhost",
-      "password": "tirthraj07",
-      "port": "5432",
-      "user": "postgres"
-    },
-    {
-      "chat_id": "8GhawMB4JPYx",
-      "chat_name": "Supabase",
-      "database": "postgres",
-      "dbms": "postgresql",
-      "environment": "local",
-      "host_name": "aws-0-ap-southeast-1.pooler.supabase.com",
-      "password": "eS0LEMI9RO2GWlc8",
-      "port": "6543",
-      "user": "postgres.suhccusqbtbdgjqmysqg"
-    }
-]
+chats = []
 
 history = defaultdict(list)
 
@@ -117,10 +83,12 @@ def chatHistoryRoute(chat_id):
         data = request.get_json()
         role = data.get('role')
         content = data.get('content')
+        content_type = data.get('content_type')
         if role and content:
             history[chat_id].append({
                 "role": role,
-                "content": content
+                "content": content,
+                "content_type":content_type
             })
             return jsonify({"success": "Chat message stored successfully"}), 201
         else:
