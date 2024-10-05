@@ -64,13 +64,13 @@ Here is the system architecture of our solution
 
 ### Output Images:
 
-1. This is the chat application in web
+1. This is the chat application on the web
 
-When you provide a prompt, it will give you the SQL query which is generated and also the output table
+When you provide a prompt, it will give you the SQL query which is generated, and also the output table
 
 ![Chat Example](public/Chat%20Example%201.png)
 
-2. These are the Insights and the graphs which get generated once you get back the results
+2. These are the Insights and the graphs that get generated once you get back the results
 
 ![Insights Example](public/Chat%20Example%202.png)
 
@@ -78,13 +78,13 @@ When you provide a prompt, it will give you the SQL query which is generated and
 
 ![LLM Example](public/Chat%20Example%203.png)
 
-In the future, you can do this on the backend by load balancing across multiple llms depending on the type of prompts
+In the future, you can do this on the backend by load balancing across multiple LLMs depending on the type of prompts
 
-4. You can connect to your local postgres database or upload the replication file to deploy the postgres onto our servers
+4. You can connect to your local Postgres database or upload the replication file to deploy the Postgres onto our servers
 
 ![DB Creation](public/Chat%20Example%204.png)
 
-5. Our system has the ability to generate and run very complex queries
+5. Our system can generate and run very complex queries
 
 ![Complex Query Example](public/Chat%20Example%205.png)
 
@@ -104,13 +104,13 @@ In the future, you can do this on the backend by load balancing across multiple 
 
 ### 2. Start up the Query Processing service
 
-Goto <a href=""> Query Processing Service Docs </a> and start the Fast API Server
+Goto <a href="https://github.com/tirthraj07/Query-Cortex/blob/main/backend/fastapi_app/README.md"> Query Processing Service Docs </a> and start the Fast API Server
 
 ### 3. Start up the Database and Chat Creation Service
 
-Goto <a href=""> Database and Chat Creation Service Docs </a> and start up the Flask Server
+Goto <a href="https://github.com/tirthraj07/Query-Cortex/blob/main/backend/flask_app/README.md"> Database and Chat Creation Service Docs </a> and start up the Flask Server
 
 ### 4. Start up the Next Js Server
 
-Goto <a href=""> Frontend NextJs Docs </a> and start up the Next JS server
+Goto <a href="https://github.com/tirthraj07/Query-Cortex/blob/main/frontend/README.md"> Frontend NextJs Docs </a> and start up the Next JS server
 
